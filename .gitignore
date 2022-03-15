@@ -1,0 +1,13 @@
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+.\#*
+
+__pycache__/
+*.py[cod]
+*.pyc
+
+inputs
+outputs
+env
+log
