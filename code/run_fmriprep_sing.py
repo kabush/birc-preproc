@@ -28,7 +28,7 @@ def main():
     study = args.study
 
     # Load the participant's list
-    df_subjs = pd.read_csv(path_in + study + '/bids/participants.tsv', delimiter='\t')
+    df_subjs = pd.read_csv(path_in + 'participants.tsv', delimiter='\t')
     print(df_subjs)
     use_list = df_subjs['participant_id'].to_list()
     
@@ -55,11 +55,11 @@ def main():
     for subj in use_list:
     
         # Build command
-        cmd = 'singularity run --cleanenv -B ' + path_in + ' ' + path_fmriprep + ' ' + path_in + ' ' + path_out + ' participant --participant_label ' + str(subj) + ' --fs-license-file ' + path_fsl_license + ' --fs-no-reconall --nthreads 16 -w ' + path_work + ' --output-spaces MNI152NLin2009cAsym:res-native'
+        cmd = 'singularity run --cleanenv -B ' + path_in + ' ' + path_fmriprep + ' ' + path_in + ' ' + path_drv + ' participant --participant_label ' + str(subj) + ' --fs-license-file ' + path_fsl_license + ' --fs-no-reconall --nthreads 16 -w ' + path_work + ' --output-spaces MNI152NLin2009cAsym:res-native'
         print(cmd)
         
         # Execute command
-        # os.system(cmd)
+        os.system(cmd)
                 
 if __name__ == '__main__':
     main()
