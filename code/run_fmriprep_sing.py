@@ -84,8 +84,8 @@ def main():
         cmd = 'singularity run --cleanenv -B ' + path_in + ' ' + path_fmriprep + ' ' + path_in + ' ' + path_drv + ' participant --participant_label ' + str(subj) + ' --fs-license-file ' + path_fsl_license + ' --fs-no-reconall --nthreads 16 -w ' + path_work + ' --output-spaces MNI152NLin2009cAsym:res-native'
         print(cmd)
         
-        # # Execute command
-        # os.system(cmd)
+        # Execute command
+        os.system(cmd)
                 
 if __name__ == '__main__':
     main()
