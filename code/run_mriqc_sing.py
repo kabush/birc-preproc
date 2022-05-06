@@ -22,11 +22,9 @@ def main():
     # Handle command line args
     parser = argparse.ArgumentParser(description='Preprocess study in BIDS format')
     parser.add_argument('-i','--input',help='Path to BIDS formatted study data')
-    # parser.add_argument('-o','--output',help='Path to output location')
     parser.add_argument('-s','--study',help='Data Map study identifier')
     args = parser.parse_args()
     path_in = args.input
-    # path_mriqc = args.output
     study = args.study
 
     # Load the participant's list

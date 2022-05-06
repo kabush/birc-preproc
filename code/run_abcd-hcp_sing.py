@@ -17,7 +17,7 @@ def main():
 
     # Define project paths
     path_fsl_license = '../envs/fsl_license/license.txt'
-    path_fmriprep = '../envs/singularity_images/fmriprep_latest_img.sing'
+    path_abcd-hcp = '../envs/singularity_images/abcd-hcp-pipeline.img'
 
     # Handle command line args
     parser = argparse.ArgumentParser(description='Preprocess study in BIDS format')
@@ -84,6 +84,7 @@ def main():
         # Build command
         cmd = '/usr/local/bin/singularity run --cleanenv -B ' + path_in + ' ' + path_fmriprep + ' ' + path_in + ' ' + path_drv + ' participant --participant_label ' + str(subj) + ' --fs-license-file ' + path_fsl_license + ' --fs-no-reconall --nthreads 16 -w ' + path_work + ' --output-spaces MNI152NLin2009cAsym:res-native'
         print(cmd)
+
 
         # Execute command
         os.system(cmd)
