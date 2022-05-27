@@ -1,6 +1,6 @@
-# Keith Bush, PhD (2022)
-# Univ. of Arkansas for Medical Sciences
-# Brain Imaging Research Center (BIRC)
+## Keith Bush, PhD (2022)
+## Univ. of Arkansas for Medical Sciences
+## Brain Imaging Research Center (BIRC)
 
 Scripts for running minimial processing and quality assurance via
 Singularity.  Adhere to the following (YODA) project structure
