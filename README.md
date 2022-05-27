@@ -15,7 +15,7 @@ Singularity.  Adhere to the following (YODA) project structure
 : Script outputs are routed here
 
 **/code**
-: Contains the following scripts (use -h for usage)
+: Contains the following scripts (-h for usage)
 - 'run_abcd-hcp_sing.py'
 - 'run_fmriprep_sing.py'
 - 'run_mriqc_sing.py'
